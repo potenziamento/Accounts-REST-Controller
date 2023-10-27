@@ -1,0 +1,37 @@
+<div class="transactions-container">
+    <h2>Transazioni del tuo account</h2>
+  
+    <div class="date-filters">
+      <label>
+        Da: <input type="date" [(ngModel)]="fromDate">
+      </label>
+      <label>
+        A: <input type="date" [(ngModel)]="toDate">
+      </label>
+      <button (click)="getTransactions()">Aggiorna</button>
+    </div>
+  
+    <div *ngIf="transactions.length > 0" class="transactions-list">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Descrizione</th>
+            <th>Importo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions">
+            <td>{{ transaction.accountingDate }}</td>
+            <td>{{ transaction.description }}</td>
+            <td>{{ transaction.amount }} €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="error" class="error-message">
+      {{ error }}
+    </div>
+  </div>
+  

@@ -1,0 +1,29 @@
+.transactions-container {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  
+  .date-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .transactions-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transactions-list th, .transactions-list td {
+    border: 1px solid #e0e0e0;
+    padding: 8px 12px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 20px;
+  }
+  
